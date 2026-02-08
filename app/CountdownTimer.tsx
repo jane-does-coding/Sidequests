@@ -29,7 +29,7 @@ function CountdownTimer() {
 	}
 
 	if (timeLeft <= 0) {
-		return <div className="jersey text-[4vh] text-stone-400">It’s time!</div>;
+		return <div className="jersey text-[5vh] text-stone-400">It’s time!</div>;
 	}
 
 	const total = (hours * 60 * 60 + minutes * 60) * 1000;
@@ -38,29 +38,29 @@ function CountdownTimer() {
 	const totalHours = Math.floor(timeLeft / 1000 / 60 / 60);
 	const mins = Math.floor((timeLeft / 1000 / 60) % 60);
 
-	const radius = 120;
-	const center = 150;
+	const radius = 180;
+	const center = 200;
 	const circumference = 2 * Math.PI * radius;
+	const svgSize = 400;
 
 	return (
 		<div className="relative flex flex-col items-center justify-center h-full gap-[2vh]">
-			{/* ⚙️ Settings Button */}
 			<button
 				onClick={() => setShowSettings(true)}
-				className="absolute top-[1.5vh] right-[1.5vh] text-stone-400 text-[3vh] hover:rotate-90 transition-transform"
+				className="absolute top-[2vh] right-[2vh] text-stone-400 text-[4vh] hover:rotate-90 transition-transform"
 			>
 				<IoSettingsOutline />
 			</button>
 
-			<p className="jersey text-[3.75vh] text-stone-400">Until {label}</p>
+			<p className="jersey text-[4.5vh] text-stone-400">Until {label}</p>
 
-			<svg width="300" height="300">
+			<svg width={svgSize} height={svgSize}>
 				<circle
 					cx={center}
 					cy={center}
 					r={radius}
 					stroke="#d6d3d1"
-					strokeWidth="10"
+					strokeWidth="12"
 					fill="none"
 				/>
 				<circle
@@ -68,7 +68,7 @@ function CountdownTimer() {
 					cy={center}
 					r={radius}
 					stroke="#78716c"
-					strokeWidth="10"
+					strokeWidth="12"
 					fill="none"
 					strokeDasharray={circumference}
 					strokeDashoffset={circumference * (1 - progress)}
@@ -81,7 +81,7 @@ function CountdownTimer() {
 					textAnchor="middle"
 					dominantBaseline="middle"
 					className="jersey fill-stone-400"
-					fontSize="36"
+					fontSize="48"
 				>
 					{totalHours}h {mins}m
 				</text>

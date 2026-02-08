@@ -1,12 +1,17 @@
 function ScheduleTab() {
 	const items = [
-		{ time: "9:00 AM", title: "Check-in & Breakfast" },
-		{ time: "9:30 AM", title: "Opening Ceremony" },
-		{ time: "10:00 AM", title: "Hacking Begins 🔥" },
-		{ time: "1:00 PM", title: "Lunch" },
-		{ time: "5:30 PM", title: "Submissions Close" },
-		{ time: "6:00 PM", title: "Demos & Judging" },
-		{ time: "7:00 PM", title: "Awards + Closing" },
+		{ time: "8:30 AM", title: "Doors open" },
+		{ time: "8:30-9:00 AM", title: "Icebreakers & Brekfast" },
+		{
+			time: "9:00-9:45 AM",
+			title: "Opening Ceremony & Team Forming",
+		},
+		{ time: "9:45-11:00 PM", title: "Godot Workshop" },
+		{ time: "11:00-1:45 PM", title: "Locking in" },
+		{ time: "1:45-2:15 PM", title: "Lunch" },
+		{ time: "2:15-5:30 PM", title: "Locking in" },
+		{ time: "5:30-6:30 PM", title: "Presending & Dinner" },
+		{ time: "7:30 PM", title: "Doors close" },
 	];
 
 	return (
