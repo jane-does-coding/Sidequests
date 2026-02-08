@@ -26,12 +26,19 @@ export default async function RootLayout({
 		<html lang="en" className="dark">
 			<head>
 				<link rel="icon" href="/logo.png" />
+				<link rel="preconnect" href="https://fonts.googleapis.com" />
+				<link rel="preconnect" href="https://fonts.gstatic.com" />
+				<link
+					href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Jersey+10&display=swap"
+					rel="stylesheet"
+				></link>
 			</head>
-			<body className={`${inter.className} bg-neutral-900`}>
+			<body className={`${inter.className}`}>
 				<ToasterProvider />
 				<RegisterModal />
 				<LoginModal />
-				<Navbar currentUser={currentUser} />
+				{/* 				<Navbar currentUser={currentUser} />
+				 */}{" "}
 				{children}
 			</body>
 		</html>
