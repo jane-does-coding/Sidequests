@@ -29,7 +29,7 @@ function CountdownTimer() {
 	}
 
 	if (timeLeft <= 0) {
-		return <div className="jersey text-[5vh] text-stone-400">It’s time!</div>;
+		return <div className="jersey text-[5vh] text-yellow-500">It’s time!</div>;
 	}
 
 	const total = (hours * 60 * 60 + minutes * 60) * 1000;
@@ -45,59 +45,67 @@ function CountdownTimer() {
 
 	return (
 		<div className="relative flex flex-col items-center justify-center h-full gap-[2vh]">
+			{/* Settings */}
 			<button
 				onClick={() => setShowSettings(true)}
-				className="absolute top-[2vh] right-[2vh] text-stone-400 text-[4vh] hover:rotate-90 transition-transform"
+				className="absolute top-[2vh] right-[2vh] text-yellow-500 text-[4vh] hover:rotate-90 transition-transform"
 			>
 				<IoSettingsOutline />
 			</button>
 
-			<p className="jersey text-[4.5vh] text-stone-400">Until {label}</p>
+			<p className="jersey text-[4.5vh] text-blue-600">Until {label}</p>
 
+			{/* Circular Timer */}
 			<svg width={svgSize} height={svgSize}>
+				{/* Track */}
 				<circle
 					cx={center}
 					cy={center}
 					r={radius}
-					stroke="#d6d3d1"
-					strokeWidth="12"
+					stroke="#fde68a" /* yellow-200 */
+					strokeWidth="14"
 					fill="none"
 				/>
+
+				{/* Progress */}
 				<circle
 					cx={center}
 					cy={center}
 					r={radius}
-					stroke="#78716c"
-					strokeWidth="12"
+					stroke="#facc15" /* yellow-400 */
+					strokeWidth="14"
 					fill="none"
 					strokeDasharray={circumference}
 					strokeDashoffset={circumference * (1 - progress)}
 					strokeLinecap="round"
 					transform={`rotate(-90 ${center} ${center})`}
 				/>
+
+				{/* Time */}
 				<text
 					x="50%"
 					y="50%"
 					textAnchor="middle"
 					dominantBaseline="middle"
-					className="jersey fill-stone-400"
-					fontSize="48"
+					className="jersey fill-blue-600"
+					fontSize="52"
 				>
 					{totalHours}h {mins}m
 				</text>
 			</svg>
 
+			{/* Settings Modal */}
 			{showSettings && (
 				<div className="absolute inset-0 bg-black/30 flex items-center justify-center rounded-[2vh]">
-					<div className="bg-neutral-100 border-4 border-stone-400 rounded-[2vh] p-[2vh] w-[80%] flex flex-col gap-[1.5vh]">
-						<h2 className="jersey text-[3vh] text-stone-400 text-center">
+					<div className="bg-yellow-100 border-4 border-yellow-300 rounded-[2vh] p-[2vh] w-[80%] flex flex-col gap-[1.5vh]">
+						<h2 className="jersey text-[3vh] text-yellow-500 text-center">
 							Timer Settings
 						</h2>
 
 						<input
 							value={label}
 							onChange={(e) => setLabel(e.target.value)}
-							className="jersey border-4 border-stone-300 rounded-[1vh] px-[1vw] py-[0.5vh]"
+							className="jersey border-4 border-yellow-300 rounded-[1vh] px-[1vw] py-[0.5vh]"
 							placeholder="Label"
 						/>
 
@@ -107,7 +115,7 @@ function CountdownTimer() {
 								min="0"
 								value={hours}
 								onChange={(e) => setHours(Number(e.target.value))}
-								className="jersey border-4 border-stone-300 rounded-[1vh] px-[1vw] py-[0.5vh] w-1/2"
+								className="jersey border-4 border-yellow-300 rounded-[1vh] px-[1vw] py-[0.5vh] w-1/2"
 								placeholder="Hours"
 							/>
 							<input
@@ -115,7 +123,7 @@ function CountdownTimer() {
 								min="0"
 								value={minutes}
 								onChange={(e) => setMinutes(Number(e.target.value))}
-								className="jersey border-4 border-stone-300 rounded-[1vh] px-[1vw] py-[0.5vh] w-1/2"
+								className="jersey border-4 border-yellow-300 rounded-[1vh] px-[1vw] py-[0.5vh] w-1/2"
 								placeholder="Minutes"
 							/>
 						</div>
@@ -123,13 +131,13 @@ function CountdownTimer() {
 						<div className="flex gap-[1vw] justify-end">
 							<button
 								onClick={() => setShowSettings(false)}
-								className="jersey text-stone-400"
+								className="jersey text-yellow-500"
 							>
 								Cancel
 							</button>
 							<button
 								onClick={applySettings}
-								className="jersey px-[2vw] py-[0.5vh] bg-stone-300/60 border-4 border-stone-300 rounded-[1vh]"
+								className="jersey px-[2vw] py-[0.5vh] bg-yellow-200 border-4 border-yellow-300 rounded-[1vh]"
 							>
 								Apply
 							</button>

@@ -15,8 +15,8 @@ function ScheduleTab() {
 	];
 
 	return (
-		<div className="w-[60vw] h-[70vh] border-4 border-stone-400 bg-neutral-50 rounded-[2vh] p-[3vh] flex flex-col gap-[2vh]">
-			<h1 className="jersey text-[4vh] text-stone-400 text-center">
+		<div className="w-[60vw] h-[70vh] border-4 border-blue-400 bg-yellow-50 rounded-[2vh] p-[3vh] flex flex-col gap-[2vh]">
+			<h1 className="jersey text-[4vh] text-blue-600 text-center">
 				Event Schedule
 			</h1>
 
@@ -24,12 +24,12 @@ function ScheduleTab() {
 				{items.map((item) => (
 					<div
 						key={item.time}
-						className="flex justify-between items-center border-4 border-stone-300 rounded-[1.5vh] px-[2vw] py-[1vh] bg-stone-200/40"
+						className="flex justify-between items-center border-4 border-blue-300 rounded-[1.5vh] px-[2vw] py-[1vh] bg-blue-200/40"
 					>
-						<span className="jersey text-[2.75vh] text-stone-500">
+						<span className="jersey text-[2.75vh] text-blue-800">
 							{item.time}
 						</span>
-						<span className="jersey text-[2.75vh] text-stone-400">
+						<span className="jersey text-[2.75vh] text-blue-600">
 							{item.title}
 						</span>
 					</div>

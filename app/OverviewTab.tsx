@@ -42,9 +42,9 @@ function OverviewTab() {
 	return (
 		<div className="flex flex-col items-center gap-[4vh] w-full h-full py-[4vh]">
 			{/* Description */}
-			<div className="w-[70vw] bg-neutral-50 border-4 border-stone-400 rounded-[2vh] p-[4vh] text-center flex flex-col gap-[2vh]">
-				<h1 className="jersey text-[4vh] text-stone-400">Campfire Hackathon</h1>
-				<p className="jersey text-[2.75vh] text-stone-500 leading-relaxed">
+			<div className="w-[70vw] bg-yellow-50 border-4 border-blue-400 rounded-[2vh] p-[4vh] text-center flex flex-col gap-[2vh]">
+				<h1 className="jersey text-[4vh] text-blue-800">Campfire Hackathon</h1>
+				<p className="jersey text-[2.75vh] text-blue-600 leading-relaxed">
 					Campfire is a beginner-friendly, high-energy hackathon where students
 					explore technology, build fun projects, and learn new skills in a
 					supportive environment. Over the course of a single day, participants
@@ -52,7 +52,7 @@ function OverviewTab() {
 					and apps to hardware experiments. No prior experience is required—just
 					bring curiosity, ideas, and a spirit of experimentation!
 				</p>
-				<p className="jersey text-[2.5vh] text-stone-500">
+				<p className="jersey text-[2.5vh] text-blue-600">
 					All projects are welcome, and our mentors are here to help you bring
 					your vision to life.
 				</p>
@@ -60,7 +60,7 @@ function OverviewTab() {
 
 			{/* Sponsors Section */}
 			<div className="w-[70vw] flex flex-col gap-[2vh]">
-				<h2 className="jersey text-[3.25vh] text-stone-400 text-center">
+				<h2 className="jersey text-[3.25vh] text-blue-800 text-center">
 					Sponsored By
 				</h2>
 				<div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-[2vw] items-center justify-center">
@@ -70,7 +70,7 @@ function OverviewTab() {
 							href={sponsor.link}
 							target="_blank"
 							rel="noopener noreferrer"
-							className="flex items-center justify-center p-[2vh] border-4 border-stone-300 bg-neutral-900 rounded-[1vh] hover:scale-105 transition-transform"
+							className="flex items-center justify-center p-[2vh] border-4 border-blue-300 bg-yellow-900 rounded-[1vh] hover:scale-105 transition-transform"
 						>
 							<img
 								src={sponsor.logo}
