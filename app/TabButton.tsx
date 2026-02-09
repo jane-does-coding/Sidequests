@@ -7,11 +7,13 @@ function TabButton({
 	active,
 	onClick,
 	compact = false,
+	right = false,
 }: {
 	label: ReactNode;
 	active: boolean;
 	onClick: () => void;
 	compact?: boolean;
+	right?: boolean;
 }) {
 	return (
 		<button
@@ -21,6 +23,7 @@ function TabButton({
 				rounded-t-[2vh] border-4 border-blue-400
 				jersey text-[5vh] font-light text-blue-600
 				transition-all ease-in-out
+				${right ? "ml-auto" : ""}
 				${compact ? "px-[1vw]" : "px-[5vw]"}
 				${
 					active

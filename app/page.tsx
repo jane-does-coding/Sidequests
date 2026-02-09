@@ -24,7 +24,7 @@ export default function Home() {
 					{activeTab === "ideas" && <IdeasTab />}
 
 					{activeTab === "star" && (
-						<div className="w-full h-full flex items-center justify-center">
+						<div className="w-full h-full flex flex-col items-center justify-center">
 							<div className="w-[80%] h-[80%] border-4 border-blue-400 rounded-[2vh] overflow-hidden bg-black">
 								<iframe
 									className="w-full h-full"
@@ -34,13 +34,16 @@ export default function Home() {
 									allowFullScreen
 								/>
 							</div>
+							<p className="jersey text-blue-600 text-[4vh] mt-[1vh]">
+								If you are a reviewer, you just got Rickrolled!
+							</p>
 						</div>
 					)}
 				</div>
 			</div>
 
 			{/* TABS */}
-			<div className="fixed bottom-[84.6vh] z-50 w-[50vw] h-[10vh] flex gap-[1vw] items-end justify-center ml-[16vw]">
+			<div className="fixed bottom-[84.6vh] z-50 w-full h-[10vh] flex gap-[1vw] items-end justify-center px-[5vw]">
 				<TabButton
 					label="Main"
 					active={activeTab === "main"}
@@ -66,6 +69,7 @@ export default function Home() {
 					active={activeTab === "star"}
 					onClick={() => setActiveTab("star")}
 					compact
+					right
 				/>
 			</div>
 		</div>

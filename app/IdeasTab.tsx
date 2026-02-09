@@ -16,7 +16,7 @@ function IdeasTab() {
 						},
 						{
 							title: "Top-Down Adventure",
-							desc: "Explore a map, talk to NPCs, and collect items.",
+							desc: "Explore a map, start from the top, get to the bottom, through platforms and enemies.",
 						},
 						{
 							title: "Puzzle Game",

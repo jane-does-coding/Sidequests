@@ -3,15 +3,12 @@
 function OrgPage() {
 	return (
 		<div className="bg-blue-300 w-full h-screen fixed">
-			{/* CONTENT */}
 			<div className="w-full h-[85vh] bg-yellow-100 fixed bottom-0 left-0 border-t-blue-400 border-4 flex items-center justify-center">
 				<div className="w-[85vw] h-[75vh] border-4 border-blue-200 bg-yellow-50 rounded-[5vh] p-[4vh] overflow-y-auto flex flex-col gap-[3vh]">
-					{/* Header */}
 					<h1 className="jersey text-[4vh] text-neutral-950 text-center">
 						Campfire Utah - Organizer Info
 					</h1>
 
-					{/* Confirmed Info */}
 					<section className="border-4 border-blue-200 bg-blue-50 rounded-[3vh] p-[3vh]">
 						<h2 className="jersey text-[3.2vh] text-blue-600 mb-[1.5vh]">
 							Confirmed Info
@@ -48,7 +45,6 @@ function OrgPage() {
 						</ul>
 					</section>
 
-					{/* Not Confirmed */}
 					<section className="border-4 border-blue-200 bg-blue-50 rounded-[3vh] p-[3vh]">
 						<h2 className="jersey text-[3.2vh] text-blue-600 mb-[1vh]">
 							Not Confirmed
@@ -58,7 +54,6 @@ function OrgPage() {
 						</ul>
 					</section>
 
-					{/* Schedule */}
 					<section className="border-4 border-blue-200 bg-blue-50 rounded-[3vh] p-[3vh]">
 						<h2 className="jersey text-[3.2vh] text-blue-600 mb-[1.5vh]">
 							Schedule — Feb 28th
@@ -83,7 +78,6 @@ function OrgPage() {
 						</div>
 					</section>
 
-					{/* Food */}
 					<section className="border-4 border-blue-200 bg-blue-50 rounded-[3vh] p-[3vh]">
 						<h2 className="jersey text-[3.2vh] text-blue-600 mb-[1vh]">Food</h2>
 
@@ -110,12 +104,22 @@ function OrgPage() {
 									Little Caesars (tentative)
 								</a>
 							</li>
+							<li>
+								<span className="text-gray-900">Lunch:</span>{" "}
+								<a
+									href="/"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="underline hover:text-gray-900"
+								>
+									Maybe Chick-fil-a?
+								</a>
+							</li>
 						</ul>
 					</section>
 				</div>
 			</div>
 
-			{/* SINGLE TAB */}
 			<div className="bottom-[84.6vh] fixed w-full h-[10vh] flex justify-center items-end">
 				<div className="h-[120%] bg-yellow-100 px-[6vw] rounded-t-[3vh] border-4 border-blue-400 border-b-yellow-100 border-b-0 flex items-center justify-center">
 					<span className="jersey text-[5vh] text-blue-600 font-light">
